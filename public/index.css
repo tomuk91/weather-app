@@ -35,4 +35,7 @@ body {
 }
 
 .title {
+    font-family: "Baskerville Old Face";
+    display: flex;
+    justify-content: center;
 }

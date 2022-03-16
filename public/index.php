@@ -1,4 +1,5 @@
-<?php include '../private/init.php' ?>
+<?php require_once '../private/init.php' ?>
+<?php require_once '../private/api.php' ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,9 +14,13 @@
 
 <?php include(SHARED_PATH . '/background.php')?>
 
+<?php
+$weather = getWeatherData('london');
+?>
+
 <div class="weather-container">
     <div class="title">
-        <h1>Test</h1>
+        <h1><?php echo $weather["sys"]["country"] . " " . $weather["name"]?></h1>
     </div>
 </div>
 </body>
