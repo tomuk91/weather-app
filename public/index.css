@@ -1,3 +1,11 @@
+body {
+    height: 100vh;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+}
+
 #background-video {
     width: 100vw;
     height: 100vh;
@@ -16,4 +24,15 @@
       background: url("media/background.PNG");
       background-size: cover;
     }
+}
+
+.weather-container {
+    width: 400px;
+    height: 200px;
+    border-radius: 25px;
+    background: hsl(188, 100%, 37%, .5);
+    border: aliceblue 4px solid;
+}
+
+.title {
 }

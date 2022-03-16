@@ -1,3 +1,5 @@
+<?php include '../private/init.php' ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +10,13 @@
     <title>Weather App</title>
 </head>
 <body>
-<?php include('includes/background.php')?>
+
+<?php include(SHARED_PATH . '/background.php')?>
+
+<div class="weather-container">
+    <div class="title">
+        <h1>Test</h1>
+    </div>
+</div>
 </body>
 </html>
