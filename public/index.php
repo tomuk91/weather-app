@@ -28,6 +28,8 @@ include SHARED_PATH . '/nav.php';
 ?>
 
 <?php $weather = getWeatherData($city); ?>
+<?php $dailyWeather = dailyWeatherData($city); ?>
+
 
 <div class="container banner">
     <div class="row">
@@ -57,6 +59,23 @@ include SHARED_PATH . '/nav.php';
     </div>
 </div>
 
+<div class="container">
+    <div class="col-md-12 d-flex justify-content-evenly mx-1">
+		<?php foreach ($dailyWeather["list"] as $weatherKey => $weatherValue) { ?>
+            <div class="card mx-1" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title"><?php echo date('l', $weatherValue["dt"]) ?></h5>
+                    <h6 class="card-subtitle mb-2 text-muted"><?php echo $weatherValue["weather"]["0"]["description"] ?></h6>
+                    <div class="daily-image">
+                        <img src="http://openweathermap.org/img/wn/<?php echo $weatherValue["weather"]["0"]["icon"] ?>@2x.png">
+                    </div>
+                    <h6>Max: <?php echo $weatherValue["temp"]["max"] . $celsius ?></h6>
+                    <h6>Min: <?php echo $weatherValue["temp"]["min"] . $celsius ?></h6>
+                </div>
+            </div>
+		<?php } ?>
+    </div>
+</div>
 
 </body>
 </html>

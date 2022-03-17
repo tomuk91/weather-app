@@ -25,7 +25,7 @@ function dailyWeatherData(string $city)
 	$curl = curl_init();
 
 	curl_setopt_array($curl, [
-		CURLOPT_URL => "https://community-open-weather-map.p.rapidapi.com/forecast?q=" . $city . "&units=metric",
+		CURLOPT_URL => "https://community-open-weather-map.p.rapidapi.com/forecast/daily?q=" . $city . "&units=metric",
 		CURLOPT_RETURNTRANSFER => TRUE,
 		CURLOPT_FOLLOWLOCATION => TRUE,
 		CURLOPT_ENCODING => "",
@@ -43,5 +43,7 @@ function dailyWeatherData(string $city)
 	$err = curl_error($curl);
 
 	curl_close($curl);
+
+	return json_decode($response, TRUE);
 
 }

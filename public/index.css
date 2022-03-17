@@ -1,8 +1,6 @@
 body {
     font-family: "Baskerville Old Face";
     height: 100vh;
-    display: flex;
-    flex-direction: column;
 
 }
 
@@ -39,9 +37,19 @@ body {
     border: aliceblue 4px solid;
 }
 
+.daily-weather {
+    flex-direction: row !important;
+}
+
 .weather-image {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+}
+
+.daily-image {
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
