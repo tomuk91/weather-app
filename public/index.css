@@ -1,11 +1,9 @@
 body {
-   font-family: "Baskerville Old Face";
+    font-family: "Baskerville Old Face";
     height: 100vh;
     display: flex;
     flex-direction: column;
-    align-self: center;
-    align-items: center;
-    justify-content: center;
+
 }
 
 #background-video {
@@ -18,13 +16,16 @@ body {
     top: 0;
     bottom: 0;
     z-index: -1;
-  }
+}
 
-  @media (max-width: 750px) {
-    #background-video { display: none; }
+@media (max-width: 750px) {
+    #background-video {
+        display: none;
+    }
+
     body {
-      background: url("media/background.PNG");
-      background-size: cover;
+        background: url("media/background.PNG");
+        background-size: cover;
     }
 }
 
@@ -38,30 +39,59 @@ body {
     border: aliceblue 4px solid;
 }
 
+.weather-image {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.weather-image > img {
+    width: 12rem;
+    height: 12rem;
+}
+
 .title {
     font-size: 1.2rem;
     color: aliceblue;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    padding: 20px;
 }
 
 .temp {
-   color: black;
+    color: black;
     font-weight: bolder;
+}
+
+.stats {
+    display: flex;
+}
+
+.stats > h6 {
+    padding: 5px;
+}
+
+.stats-title {
+    color: aliceblue;
+}
+
+.banner {
+    padding: 20px;
 }
 
 .description {
     display: flex;
     color: aliceblue;
     justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
-.stats {
-    margin-left: 10px;
-    display: flex;
-    justify-content: space-between;
+.description > h2 {
+    font-size: 1.3rem;
 }
+
 
 /* FORM STYLING */
 
@@ -100,7 +130,12 @@ button {
 svg {
     color: #fff;
     fill: currentColor;
-    width: 24px;
-    height: 24px;
+    width: 3rem;
+    height: 3rem;
     padding: 10px;
+}
+
+.navbar {
+    border-bottom: 2px black solid;
+    opacity: 0.5;
 }
