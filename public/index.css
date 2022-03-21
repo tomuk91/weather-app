@@ -41,6 +41,10 @@ body {
     flex-direction: row !important;
 }
 
+.time {
+    font-size: 2rem;
+}
+
 .weather-image {
     display: flex;
     justify-content: flex-end;

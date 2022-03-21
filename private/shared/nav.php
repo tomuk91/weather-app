@@ -1,6 +1,7 @@
 <nav class="navbar navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand">Weather Network</a>
+        <h5 id="clock"></h5>
         <form id="form">
             <input type="search" id="query" name="searchCity" placeholder="Enter a city...">
             <button>
@@ -12,3 +13,22 @@
         </form>
     </div>
 </nav>
+
+<script defer>
+    const now = new Date(<?php echo time() * 1000 ?>);
+
+    function startInterval() {
+        setInterval('updateTime();', 1000);
+    }
+
+    startInterval();//
+    function updateTime() {
+        let nowMS = now.getTime();
+        nowMS += 1000;
+        now.setTime(nowMS);
+        const clock = document.getElementById('clock');
+        if (clock) {
+            clock.innerHTML = now.toString();//adjust to suit
+        }
+    }
+</script>

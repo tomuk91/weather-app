@@ -59,11 +59,11 @@ include SHARED_PATH . '/nav.php';
     </div>
 </div>
 
-<div class="container">
-    <div class="col-md-12 d-flex justify-content-evenly mx-1">
+<div class="container mx-auto">
+    <div class="col-md-12 d-flex flex-sm-column flex-md-row flex-wrap justify-content-center">
 		<?php foreach ($dailyWeather["list"] as $weatherKey => $weatherValue) { ?>
             <div class="card mx-1" style="width: 18rem;">
-                <div class="card-body">
+                <div class="card- mx-auto p-2">
                     <h5 class="card-title"><?php echo date('l', $weatherValue["dt"]) ?></h5>
                     <h6 class="card-subtitle mb-2 text-muted"><?php echo $weatherValue["weather"]["0"]["description"] ?></h6>
                     <div class="daily-image">
@@ -76,6 +76,5 @@ include SHARED_PATH . '/nav.php';
 		<?php } ?>
     </div>
 </div>
-
 </body>
 </html>
